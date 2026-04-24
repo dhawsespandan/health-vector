@@ -57,7 +57,7 @@ In Ayurveda, sleep (called *Nidra*) is one of the three pillars of health (*Tray
 4. **Avoid caffeine after 2 PM** — caffeine's half-life is 5–6 hours
 5. **4-7-8 breathing technique** — inhale for 4 counts, hold for 7, exhale for 8
 
-Start tracking your sleep score on VitaMetrics to see how sleep quality correlates with your overall wellness index.
+Start tracking your sleep score on Health Vector to see how sleep quality correlates with your overall wellness index.
     `,
   },
   {
@@ -118,7 +118,7 @@ In Ayurveda, anxiety is understood as aggravated **Vata dosha** — excessive ai
 
 If anxiety is interfering with daily functioning for more than 2 weeks, seeking professional support is not weakness — it's wisdom. Cognitive Behavioural Therapy (CBT) has a 60–80% success rate for generalised anxiety disorder.
 
-Your VitaMetrics Mental Index tracks your anxiety levels over time. If you notice a consistent pattern of low mental scores, use the booking feature to schedule a consultation.
+Your Health Vector Mental Index tracks your anxiety levels over time. If you notice a consistent pattern of low mental scores, use the booking feature to schedule a consultation.
     `,
   },
   {
@@ -198,7 +198,7 @@ Ancient observation and modern genetics are converging.
 
 ## Finding Your Prakriti
 
-The VitaMetrics Prakriti assessment (Q26–Q35) analyses 10 constitutional markers to identify your dominant dosha. This informs your personalised recommendation plan, including diet, lifestyle, and exercise guidance tailored to your constitutional type.
+The Heatlh Vector Prakriti assessment (Q26–Q35) analyses 10 constitutional markers to identify your dominant dosha. This informs your personalised recommendation plan, including diet, lifestyle, and exercise guidance tailored to your constitutional type.
     `,
   },
   {
@@ -267,7 +267,7 @@ Daily *Sattvic* practices — meditation, gratitude, spending time in nature —
 
 ## Building Your Emotional Fitness
 
-Like physical fitness, emotional fitness is built through consistent, progressive practice. Your VitaMetrics Emotional Index tracks mood stability, relationship quality, sense of purpose, and regulation capacity — giving you a data-informed view of your emotional health over time.
+Like physical fitness, emotional fitness is built through consistent, progressive practice. Your Health Vector Emotional Index tracks mood stability, relationship quality, sense of purpose, and regulation capacity — giving you a data-informed view of your emotional health over time.
     `,
   },
   {
@@ -334,7 +334,7 @@ This ancient pranayama balances left and right brain hemispheres and has been sh
 
 ## Starting Your Practice
 
-Begin with just **5 minutes** of box breathing each morning before checking your phone. Track how your stress levels change in your VitaMetrics Mental Index over 4 weeks. The data will speak for itself.
+Begin with just **5 minutes** of box breathing each morning before checking your phone. Track how your stress levels change in your Health Vector Mental Index over 4 weeks. The data will speak for itself.
 
 The breath is the only tool in your possession that is always with you, always free, and always available. Use it.
     `,
@@ -343,7 +343,7 @@ The breath is the only tool in your possession that is always with you, always f
 
 const seedDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/vitametrics');
+    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/healthvector', {});
     console.log('✅ Connected to MongoDB');
 
     // Seed blog posts
@@ -356,33 +356,33 @@ const seedDB = async () => {
     }
 
     // Create a test admin user
-    const adminExists = await User.findOne({ email: 'admin@vitametrics.com' });
+    const adminExists = await User.findOne({ email: 'admin@healthvector.com' });
     if (!adminExists) {
       await User.create({
-        name: 'VitaMetrics Admin',
-        email: 'admin@vitametrics.com',
+        name: 'Health Vector Admin',
+        email: 'admin@healthvector.com',
         password: 'Admin@123',
         role: 'admin',
         age: 30,
         gender: 'Other',
         occupation: 'Platform Administrator',
       });
-      console.log('✅ Admin user created: admin@vitametrics.com / Admin@123');
+      console.log('✅ Admin user created: admin@healthvector.com / Admin@123');
     }
 
     // Create a test regular user
-    const testUserExists = await User.findOne({ email: 'test@vitametrics.com' });
+    const testUserExists = await User.findOne({ email: 'test@healthvector.com' });
     if (!testUserExists) {
       await User.create({
         name: 'Test User',
-        email: 'test@vitametrics.com',
+        email: 'test@healthvector.com',
         password: 'Test@123',
         role: 'user',
         age: 28,
         gender: 'Male',
         occupation: 'Software Engineer',
       });
-      console.log('✅ Test user created: test@vitametrics.com / Test@123');
+      console.log('✅ Test user created: test@healthvector.com / Test@123');
     }
 
     console.log('\n🌱 Database seeding complete!');
