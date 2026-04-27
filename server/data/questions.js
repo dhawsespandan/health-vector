@@ -1,38 +1,33 @@
-/**
- * Assessment Questions Data
- * 25 wellness questions (Q1–Q25) + 10 Prakriti questions (Q26–Q35)
- */
-
 const WELLNESS_QUESTIONS = [
   // Physical (Q1–Q8) – max 40
-  { id: 1, section: 'Physical', text: 'How would you rate your sleep quality over the past week?' },
+  { id: 1, section: 'Physical', text: 'Do you wake up feeling rested and refreshed?' },
   { id: 2, section: 'Physical', text: 'How often do you feel physically energetic during the day?' },
   { id: 3, section: 'Physical', text: 'How frequently do you engage in physical exercise or movement?' },
-  { id: 4, section: 'Physical', text: 'How regular and balanced is your daily diet?' },
+  { id: 4, section: 'Physical', text: 'Do you eat regular, balanced meals throughout the day?' },
   { id: 5, section: 'Physical', text: 'Do you stay adequately hydrated throughout the day?' },
   { id: 6, section: 'Physical', text: 'Do you experience chronic physical pain, fatigue, or discomfort?', reversed: true },
-  { id: 7, section: 'Physical', text: 'How satisfied are you with your current physical fitness level?' },
-  { id: 8, section: 'Physical', text: 'Do you feel your body weight and physical health are in a comfortable state?' },
+  { id: 7, section: 'Physical', text: 'Do you feel satisfied with your current physical fitness level?' },
+  { id: 8, section: 'Physical', text: 'Do you feel comfortable with your body weight and overall physical health?' },
 
   // Mental (Q9–Q17) – max 45
   { id: 9, section: 'Mental', text: 'How often do you experience stress in your daily life?', reversed: true },
-  { id: 10, section: 'Mental', text: 'How clear and focused is your thinking on a typical day?' },
-  { id: 11, section: 'Mental', text: 'How would you describe your work-life balance?' },
+  { id: 10, section: 'Mental', text: 'Do you think clearly and stay focused on a typical day?' },
+  { id: 11, section: 'Mental', text: 'Do you feel your work and personal life are well balanced?' },
   { id: 12, section: 'Mental', text: 'Do you experience anxiety or excessive worry?', reversed: true },
   { id: 13, section: 'Mental', text: 'How often do you feel mentally exhausted or experience decision fatigue?', reversed: true },
   { id: 14, section: 'Mental', text: 'Do you get adequate leisure or downtime to recharge mentally?' },
   { id: 15, section: 'Mental', text: 'Do you feel in control of your screen time and digital habits?' },
-  { id: 16, section: 'Mental', text: 'How well do you sleep without your mind racing or overthinking?' },
+  { id: 16, section: 'Mental', text: 'Do you fall asleep without your mind racing or overthinking?' },
   { id: 17, section: 'Mental', text: 'Do you feel mentally stimulated and engaged in your work or studies?' },
 
   // Emotional (Q18–Q25) – max 40
-  { id: 18, section: 'Emotional', text: 'How stable is your mood on a day-to-day basis?' },
-  { id: 19, section: 'Emotional', text: 'How satisfied are you with your key personal relationships?' },
+  { id: 18, section: 'Emotional', text: 'Do you maintain a stable mood throughout the day?' },
+  { id: 19, section: 'Emotional', text: 'Do you feel satisfied with your key personal relationships?' },
   { id: 20, section: 'Emotional', text: 'Do you feel a clear sense of purpose or direction in life?' },
-  { id: 21, section: 'Emotional', text: 'How well do you manage difficult emotions (anger, grief, frustration)?' },
+  { id: 21, section: 'Emotional', text: 'Do you manage difficult emotions (anger, grief, frustration) effectively?' },
   { id: 22, section: 'Emotional', text: 'Do you experience feelings of loneliness or social isolation?', reversed: true },
   { id: 23, section: 'Emotional', text: 'Do you regularly practice gratitude or positive reflection?' },
-  { id: 24, section: 'Emotional', text: 'How would you rate your self-confidence and self-esteem?' },
+  { id: 24, section: 'Emotional', text: 'Do you feel confident and positive about yourself?' },
   { id: 25, section: 'Emotional', text: 'Do you actively engage in social activities and community connections?' },
 ];
 
